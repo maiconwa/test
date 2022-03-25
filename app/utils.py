@@ -2,16 +2,7 @@ import pandas as pd
 import re
 
 def converter(arquivo):
-    new_names = ['cpf',
-                'private',
-                'incompleto',
-                'data da ultima compra',
-                'ticket medio',
-                'ticket da ultima compra',
-                'loja mais frequente',
-                'loja da ultima compra',
-                'cpf valido']
-
+    
     dataframe1 = pd.read_csv(arquivo,                    
                     header=1,                    
                     delim_whitespace=True)
