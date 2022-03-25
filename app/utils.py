@@ -2,6 +2,8 @@ import pandas as pd
 import re
 
 def converter(arquivo):
+    """ Converte um arquivo.txt para arquivo.csv com separadores por espaços.
+    """
     
     dataframe1 = pd.read_csv(arquivo,                    
                     header=1,                    
@@ -59,4 +61,14 @@ def validate(cpf: str) -> bool:
 
 
 def limpa_dado(dado):
+    """ Remove simbolos mantendo apenas os números.
+
+    Args:
+        dado = '529.982.247-25'
+        limpa_dado(dado): 
+
+    Returns:
+        52998224725
+    """
+    
     return re.sub('[^0-9]', '', dado)
